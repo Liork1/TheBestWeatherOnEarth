@@ -1,0 +1,18 @@
+<div class="container"> 
+    <div class="headrContainer"> 
+        <h2>{{city.name}}</h2>
+        <h3>{{date | date:'shortTime'}}</h3>
+        <h4> {{city.weather[0].main}}</h4>
+    </div>
+    <div class="contentContainer">
+        <div class="degrees">
+            <div class="iconImg"  [ngStyle]="{'background-image': 'url(' + icon + ')'}"></div>
+            <div class="temp"> {{city.main.temp}}</div>  
+            <div class="cel">°C</div>        
+        </div>
+        <div class="extra"> 
+            <div>Humidity: {{city.main.humidity}}%</div>
+            <div>Wind: {{city.wind.speed}} km/h</div>   
+        </div>
+    </div>
+</div> 
